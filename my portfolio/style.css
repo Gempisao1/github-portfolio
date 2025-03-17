@@ -44,35 +44,57 @@ html {
 .profile-container {
     display: flex;
     justify-content: center;
-    margin-bottom: 15px;
+    align-items: center;
 }
 
 .profile-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    width: 100%;
-    max-width: 300px; 
-    margin: 0 auto; 
-    transition: transform 0.3s ease;
+    position: relative;
+    display: inline-block;
+}
+
+.overlay-text {
+    position: absolute;
+    top: 10%; 
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 5px 15px;
+    font-size: 10px;
+    font-weight: bold;
+    border-radius: 5px;
 }
 
 
 .profile-img {
-    width: 200px; 
-    height: 200px; 
-    border-radius: 50%; 
-    object-fit: cover; 
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
     border: 5px solid white;
     box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
-    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
 
 .profile-img:hover {
     transform: scale(1.1);
-    box-shadow: 0 0 25px rgba(255, 255, 255, 0.7); /
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.7);
+}
+
+.image-container {
+    position: relative;
+    width: 400px; 
+    height: 400px;
+    margin: auto;
+    border: 5px solid black; 
+    overflow: hidden;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease-in-out;
 }
 
 
@@ -210,7 +232,7 @@ iframe:hover {
 }
 
 
-#emojie ul {
+#emojis ul {
     list-style: none;
     padding: 0;
     display: flex;
@@ -219,14 +241,14 @@ iframe:hover {
     gap: 30px;
 }
 
-#emojie ul li {
-    font-size: 2rem; /* Make emojis even larger */
+#emojis ul li {
+    font-size: 2rem; 
     margin: 20px;
     padding: 10px;
     background: linear-gradient(135deg, #ff9a8b, #ff6a88, #ff99ac);
     color: white;
     display: inline-block;
-    border-radius: 50%; /* Keep circular shape */
+    border-radius: 50%; 
     transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
     animation: fadeInUp 1s ease-in-out;
     border: 4px solid rgba(255, 255, 255, 0.7);
@@ -238,7 +260,7 @@ iframe:hover {
     justify-content: center;
 }
 
-#emojie ul li:hover {
+#emojis ul li:hover {
     transform: scale(1.5) rotate(15deg);
     background: linear-gradient(135deg, #ff758c, #ff7eb3, #ff99ac);
     box-shadow: 0px 8px 25px rgba(255, 255, 255, 0.6);
